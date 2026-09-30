@@ -1,61 +1,45 @@
 # NINE – Your Personal AI Assistant
 
-**NINE** is a free, cloud-based personal AI assistant inspired by Jarvis from Iron Man.
+**NINE** is a free, always-online personal AI assistant inspired by JARVIS.
 
-It runs completely for free using:
-- **Streamlit** (beautiful chat UI)
-- **Groq** free API (extremely fast Llama / Mixtral models)
-- Optional browser voice input
+It runs completely free using:
+- **Streamlit** (beautiful chat interface)
+- **Groq** free API (very fast Llama / Mixtral models)
+- Free tools: web search + weather + calculator
 
-Deploy it once on Streamlit Community Cloud and NINE stays online 24/7 at zero cost.
+Deploy once on Streamlit Community Cloud → NINE stays online 24/7 at zero cost.
+
+**Live repo:** https://github.com/NINE292/NINE
 
 ---
 
 ## Features
 
-- Jarvis-style personality (calm, witty, loyal, calls you Sir/Boss)
+- JARVIS-style personality (calm, witty, loyal, calls you Sir/Boss)
 - Real-time web search (DuckDuckGo)
+- Live weather (Open-Meteo – no key needed)
 - Calculator
-- Conversation memory (session-based)
-- Clean dark cyberpunk UI
-- Completely free to run and host
+- Streaming responses
+- Clean dark UI
+- Completely free to host and run
 
 ---
 
-## Quick Start (Local Testing)
+## 1. Get a free Groq API key (30 seconds)
 
-1. Clone the repo
-```bash
-git clone https://github.com/NINE292/NINE.git
-cd NINE
-```
-
-2. Install dependencies
-```bash
-pip install -r requirements.txt
-```
-
-3. Get a free Groq API key  
-   → https://console.groq.com  (sign up → create API key)
-
-4. Create a `.env` file
-```env
-GROQ_API_KEY=gsk_your_key_here
-```
-
-5. Run
-```bash
-streamlit run app.py
-```
+1. Go to [https://console.groq.com](https://console.groq.com)
+2. Sign up / log in
+3. Create an API key
+4. Copy it (starts with `gsk_`)
 
 ---
 
-## Deploy Free on Streamlit Cloud (Recommended)
+## 2. Deploy free on Streamlit Cloud (Recommended)
 
 1. Go to [https://share.streamlit.io](https://share.streamlit.io)
-2. Sign in with your GitHub account
+2. Sign in with the **same GitHub account** (`NINE292`)
 3. Click **New app**
-4. Select repository: `NINE292/NINE`
+4. Choose repository: `NINE292/NINE`
 5. Main file path: `app.py`
 6. Click **Advanced settings** → **Secrets** and paste:
 
@@ -63,12 +47,34 @@ streamlit run app.py
 GROQ_API_KEY = "gsk_your_actual_key_here"
 ```
 
-7. Deploy!
+7. Click **Deploy**
 
-You will get a permanent public URL like:  
+You will receive a permanent public URL, for example:  
 `https://nine292-nine.streamlit.app`
 
-NINE is now always online and free forever.
+NINE is now online and free forever.
+
+---
+
+## 3. Run locally (optional)
+
+```bash
+git clone https://github.com/NINE292/NINE.git
+cd NINE
+pip install -r requirements.txt
+```
+
+Create a `.env` file:
+
+```env
+GROQ_API_KEY=gsk_your_key_here
+```
+
+Then:
+
+```bash
+streamlit run app.py
+```
 
 ---
 
@@ -76,25 +82,22 @@ NINE is now always online and free forever.
 
 ```
 NINE/
-├── app.py              # Main Streamlit application
+├── app.py              # Main application
 ├── requirements.txt    # Dependencies
-├── .env.example        # Example environment file
+├── .env.example        # Example env file
 ├── .gitignore
 └── README.md
 ```
 
 ---
 
-## Future Upgrades (still free)
+## Future ideas (still free)
 
-- Long-term memory with SQLite / Hugging Face datasets
-- Voice output (browser TTS)
-- More tools (weather, calendar, email)
-- Telegram / Discord bot version
-- Multi-model routing
+- Long-term memory
+- Voice input / output (browser Speech API)
+- More tools (calendar, notes, email)
+- Telegram / Discord version
 
-Feel free to open issues or PRs!
-
----
+Feel free to open issues or pull requests.
 
 **License:** MIT

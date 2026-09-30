@@ -6,6 +6,9 @@ It runs completely free using:
 - **Streamlit** (beautiful chat interface)
 - **Groq** free API (very fast Llama / Mixtral models)
 - Free tools: web search + weather + calculator
+- **Long-term memory** (view, edit, download/upload)
+- **Voice input & output** (browser Web Speech API – works best in Chrome)
+- Fully **customizable personality** (presets + custom system prompt)
 
 Deploy once on Streamlit Community Cloud → NINE stays online 24/7 at zero cost.
 
@@ -15,7 +18,9 @@ Deploy once on Streamlit Community Cloud → NINE stays online 24/7 at zero cost
 
 ## Features
 
-- JARVIS-style personality (calm, witty, loyal, calls you Sir/Boss)
+- JARVIS-style (or fully custom) personality
+- Long-term memory with manual add / delete / download / upload as JSON
+- Voice input (Web Speech Recognition) + Voice output (browser TTS)
 - Real-time web search (DuckDuckGo)
 - Live weather (Open-Meteo – no key needed)
 - Calculator
@@ -54,6 +59,8 @@ You will receive a permanent public URL, for example:
 
 NINE is now online and free forever.
 
+> **Note on memory:** Long-term memory lives in the browser session. Use the **Download JSON** button in the sidebar to save your memories, and **Upload** them later to restore.
+
 ---
 
 ## 3. Run locally (optional)
@@ -78,6 +85,25 @@ streamlit run app.py
 
 ---
 
+## How to use the new features
+
+### Personality
+- Sidebar → **Personality** → choose a preset (Jarvis, Friendly, Professional, Witty, Minimal) or **Custom**
+- In Custom mode you can write your own full system prompt
+- Optionally set your name so NINE addresses you correctly
+
+### Long-term Memory
+- Tell NINE “Remember that I prefer dark mode” or “My name is Alex”
+- Or add facts manually in the sidebar
+- View / delete individual memories
+- Download as JSON or upload a previous backup
+
+### Voice
+- **Input**: Click “🎤 Start Listening” (works best in Chrome). Speak, then copy the transcript into the chat box if needed.
+- **Output**: After NINE replies, click “🔊 Speak last reply” to hear it (uses browser text-to-speech, prefers British English voices when available).
+
+---
+
 ## Project Structure
 
 ```
@@ -93,10 +119,9 @@ NINE/
 
 ## Future ideas (still free)
 
-- Long-term memory
-- Voice input / output (browser Speech API)
+- True cross-session cloud memory (e.g. free MongoDB Atlas or Hugging Face dataset)
+- Telegram / Discord bot version
 - More tools (calendar, notes, email)
-- Telegram / Discord version
 
 Feel free to open issues or pull requests.
 
